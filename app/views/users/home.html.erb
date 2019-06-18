@@ -1,0 +1,9 @@
+
+<% if current_user.name = 'Student' %>
+    <% controller.redirect_to studenthome_path %>
+<% elsif current_user.name = 'Teacher' %>
+    <% controller.redirect_to teacherhome_path %>
+<% else %>
+    <% controller.redirect_to login_path %>
+<% end %>
+

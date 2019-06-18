@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Homerooms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Goal</th>
+      <th>Name</th>
+      <th>Teacher</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @homerooms.each do |homeroom| %>
+      <tr>
+        <td><%= homeroom.goal %></td>
+        <td><%= homeroom.name %></td>
+        <td><%= homeroom.teacher %></td>
+        <td><%= link_to 'Show', homeroom %></td>
+        <td><%= link_to 'Edit', edit_homeroom_path(homeroom) %></td>
+        <td><%= link_to 'Destroy', homeroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Homeroom', new_homeroom_path %>

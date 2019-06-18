@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Goal:</strong>
+  <%= @homeroom.goal %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @homeroom.name %>
+</p>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @homeroom.teacher %>
+</p>
+
+<%= link_to 'Edit', edit_homeroom_path(@homeroom) %> |
+<%= link_to 'Back', homerooms_path %>
